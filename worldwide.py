@@ -63,13 +63,13 @@ async def main():
     # print("\nprint table shape\n", table.shape)
 
 
-    table.to_csv(r'C:\Users\patel\.PyCharmCE2019.3\corona\visualizer\corona_worldwide.csv', index=False)
+    table.to_csv(r'corona_worldwide.csv', index=False)
     await browser.close()
 
 asyncio.get_event_loop().run_until_complete(main())
 
 # read csv file
-worldwide = pd.read_csv("C:\\Users\\patel\\.PyCharmCE2019.3\\corona\\visualizer\\corona_worldwide.csv")
+worldwide = pd.read_csv("corona_worldwide.csv")
 worldwide.drop(worldwide.index[0], inplace=True)
 
 # top 20 countries with most confirmed cases
