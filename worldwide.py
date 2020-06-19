@@ -46,7 +46,7 @@ async def main():
 
     # change data type
     table_int = table[['Confirmed', 'Recovered', 'Deaths', 'Cases per 1 million people']]\
-        .apply(lambda x: x.replace({',': '', '—': '0'}, regex=True)).astype(float)
+        .apply(lambda x: x.replace({',': '', '—': '0','No data': '0'}, regex=True)).astype(float)
 
     # print(table_int.dtypes)
 
